@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DidaHelp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-snap-type: y mandatory;
+    }
+    section {
+      scroll-snap-align: start;
+    }
+    body {
+      font-family: 'Georgia', serif;
+      background: url('https://i.pinimg.com/736x/a8/43/9f/a8439f7badd0446b359e74c7178597c5.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      max-width: 1300px !important; 
+      padding: 3rem !important;
+      min-height: 400px;
+      border-radius: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .quote {
+      font-weight: 600;
+      font-style: italic;
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      color: #5a4a2e;
+      user-select: none;
+    }
+    .ios-btn {
+      display: inline-block;
+      background-color: #1e3a8a;
+      color: white;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(30, 58, 138, 0.5);
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .ios-btn:hover,
+    .ios-btn:focus {
+      background-color: #172554;
+      box-shadow: 0 6px 12px rgba(23, 37, 84, 0.7);
+      outline: none;
+    }
+    .ios-btn:active {
+      background-color: #0f172a;
+      box-shadow: 0 2px 4px rgba(15, 23, 42, 0.9);
+    }
+  </style>
+</head>
+<body class="overflow-y-scroll h-screen">
+<header class="w-full bg-white/90 shadow-md fixed top-0 left-0 z-50">
+  <nav class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+    <div class="font-bold text-lg">DidaHelp</div>
+    <div class="hidden md:flex space-x-4 text-sm">
+      <a href="#materials" class="hover:underline">Матеріали </a>
+      <a href="#planner" class="hover:underline"> Планування</a>
+      <a href="#tests" class="hover:underline">Оцінювання </a>
+      <a href="#Distance learning" class="hover:underline">Онлайн-навчання </a>
+    </div>
+    <button class="md:hidden text-gray-800 text-xl" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">☰</button>
+  </nav>
+  <div id="mobileMenu" class="md:hidden hidden flex flex-col px-4 pb-4 space-y-2 text-sm bg-white/90">
+    <a href="#materials" class="hover:underline">Матеріали </a>
+    <a href="#planner" class="hover:underline">Планування</a>
+    <a href="#tests" class="hover:underline">Контроль знань</a>
+    <a href="#plans" class="hover:underline"> Планування</a>
+    <a href="#Distance learning" class="hover:underline">Онлайн-навчання</a>
+  </div>
+</header>
+<main class="pt-24 space-y-12">
+  <section id="materials" class="min-h-screen flex items-center justify-center px-4">
+    <div class="glass flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start w-full">
+      <div class="flex-1">
+        <h2 class="text-3xl font-bold mb-4">Матеріали </h2>
+        <p class="quote">"Найскладніше – це рішення діяти, решта – лише наполегливість"</p>
+        <p class="quote">- Амелія Ерхарт</p>
+        <div class="space-y-4">
+          <a href="https://lib.imzo.gov.ua/pdruchniki-ta-navchaln-posbniki-dlya-zdobuvachv-profesyno-profesyno-tekhnchno-osvti/" target="_blank" class="ios-btn">Посібники</a>
+          <a href="https://osvita.ua/school/metod-rekom/" target="_blank" class="ios-btn">Методичні рекомендації </a>
+          <a href="https://docs.google.com/document/d/112Tob9eKKxfCpUxjEDbXlVcPjqqDGyBC5o7KOccWjGU/edit?tab=t.0" target="_blank" class="ios-btn">Плани по компетенціям</a>
+        </div>
+      </div>
+      <img src="https://i.pinimg.com/736x/23/51/11/2351115673f8e8c3488df08a56c75b06.jpg" alt="Materials" class="rounded-xl shadow-md w-full max-w-[350px] h-auto object-cover">
+    </div>
+  </section>
+
+  <section id="planner" class="min-h-screen flex justify-center items-center px-4 py-10">
+    <div class="glass flex flex-col md:flex-row rounded-xl p-6 gap-8 items-center md:items-start shadow-xl bg-white/40 w-full max-w-[900px]">
+      <div class="w-[300px] flex-shrink-0">
+        <img src="https://i.pinimg.com/736x/eb/ef/d1/ebefd1f526aff1151972937c83b1c16e.jpg" alt="Planner Image" class="w-full h-[320px] object-cover rounded-xl shadow-lg" />
+      </div>
+      <div class="flex flex-col items-center w-full gap-6 text-center md:text-left">
+        <h2 class="text-3xl font-semibold text-gray-900"> Планування</h2>
+        <div class="flex gap-4 justify-center md:justify-start">
+          <div class="bg-white text-black text-2xl font-mono w-28 h-14 rounded-xl flex items-center justify-center shadow-md">
+            <span id="iosClock">00:00</span>
+          </div>
+          <a href="https://mail.google.com" target="_blank" class="flex items-center gap-2 bg-white px-4 py-2 rounded-xl shadow hover:bg-gray-100 transition">
+            <img src="https://www.gstatic.com/images/branding/product/1x/gmail_48dp.png" alt="Gmail" class="w-5 h-5" />
+            <span class="text-sm font-medium text-gray-800">Gmail</span>
+          </a>
+        </div>
+        <div class="w-full">
+          <iframe src="https://calendar.google.com/calendar/embed?src=uk.ukrainian%23holiday%40group.v.calendar.google.com&ctz=Europe%2FKyiv" style="border:0" width="100%" height="200" frameborder="0" scrolling="no" class="rounded-xl shadow"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tests" class="min-h-screen flex items-center justify-center px-4">
+    <div class="glass flex flex-col md:flex-row gap-6 md:gap-8 items-center w-full max-w-[900px]">
+      <div class="flex-1">
+        <h2 class="text-3xl font-bold mb-4">Оцінювання</h2>
+        <p class="quote">"Це завжди здається неможливим, поки це не зроблено."</p>
+        <p class="quote"> - Нельсон Мандела </p>
+        <div class="mb-6">
+          <a href="https://docs.google.com/forms/d/17U5qi4gLWXFovKecG6w7JVO_9ddxKEcju3E3WYa0fa8/edit" target="_blank" class="ios-btn">Контрольні роботи</a>
+        </div>
+        <div>
+          <a href="https://naurok.com.ua/" target="_blank" class="ios-btn">Тестові завдання</a>
+        </div>
+      </div>
+      <img src="https://i.pinimg.com/736x/3b/2d/91/3b2d9177f8f906dd15c948326c6ace64.jpg" alt="Tests" class="rounded-xl shadow-md w-full max-w-[350px] h-auto object-cover">
+    </div>
+  </section>
+
+  <section id="Distance learning" class="min-h-screen flex items-center justify-center px-4">
+    <div class="glass flex flex-col md:flex-row-reverse gap-6 md:gap-8 items-center md:items-start w-full max-w-[900px]">
+      <div class="flex-1">
+        <h2 class="text-3xl font-bold mb-4">Онлайн-навчання</h2>
+        <p class="quote">"Інвестиція в знання приносить найкращий відсоток."</p>
+        <p class="quote">– Бенджамін Франклін</p>
+        <div class="space-y-4 sm:space-y-0 sm:flex sm:flex-wrap sm:gap-4">
+
+          <a href="https://www.zoom.com/ru" target="_blank" class="ios-btn">Zoom</a>
+
+          <a href="https://accounts.google.com/o/oauth2/auth?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=token&scope=https://www.googleapis.com/auth/calendar.events" target="_blank" class="ios-btn">Google Meet</a>
+
+          <a href="https://smart-school.com.ua/novii-dodatok-dlya-vchiteliv-smart-school-for-teachers-2-0/" target="_blank" class="ios-btn">Smart-School</a>
+
+<a href="https://prometheus.org.ua/" target="_blank" class="ios-btn">Рrometheus</a>
+
+<a href="https://osvita.diia.gov.ua/?gad_source=1&gad_campaignid=22563345512&gbraid=0AAAAA_fWt1miB7OFo4TMp3ZCDIQOlOz-6&gclid=Cj0KCQjwmK_CBhCEARIsAMKwcD6AYUpuI2lVG-07eaMsLNECyHrUWdiv_1y1PJTmh1O-UZ3j2pokLbgaAkXaEALw_wcB" target="_blank" class="ios-btn">Dia</a>
+
+<a href="https://www.cisco.com/c/uk_ua/training-events.html" target="_blank" class="ios-btn">Cisco</a>
+
+        </div>
+      </div>
+      <img src="https://i.pinimg.com/736x/d0/e1/f1/d0e1f1d929767fc1e9282f67927188ac.jpg" alt="Zoom" class="rounded-xl shadow-md w-full max-w-[350px] h-auto object-cover">
+    </div>
+  </section>
+</main>
+<script>
+  function updateIosClock() {
+    const now = new Date();
+    const clock = document.getElementById("iosClock");
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    clock.textContent = hours + ':' + minutes;
+  }
+  setInterval(updateIosClock, 1000);
+  updateIosClock();
+</script>
+</body>
+</html>
